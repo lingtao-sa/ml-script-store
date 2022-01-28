@@ -29,6 +29,10 @@ curl -X POST --anyauth --user admin:admin -i -H "Content-Type: application/json"
 yes | cp /var/lib/waagent/custom-script/download/0/datadog.yaml /etc/datadog-agent/
 yes | cp /var/lib/waagent/custom-script/download/0/conf.yaml /etc/datadog-agent/conf.d/marklogic.d/
 
+chown dd-agent:dd-agent /etc/datadog-agent/conf.d/marklogic.d/conf.yaml
+chmod 744 conf.yaml /etc/datadog-agent/conf.d/marklogic.d/conf.yaml
+
+
 # Restart datadog agent
 sudo systemctl restart datadog-agent
 # sudo systemctl status datadog-agent
