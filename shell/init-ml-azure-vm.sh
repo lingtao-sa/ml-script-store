@@ -13,13 +13,13 @@
 sleep 2m
 
 # Update CentOS - It will take quit a while to complete 
-#sudo yum -y update
+sudo yum -y update
 
 # Init ML bootstrap node
 sh init-bootstrap-node.sh 'admin' 'admin' 'basic' \
     3 10 'public' localhost
 
-# Wait for ML to Init
+# Wait for ML to init database
 sleep 2m
 
 # Creat datadog user in ML DB
