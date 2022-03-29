@@ -16,7 +16,7 @@ sleep 2m
 sudo yum -y update
 
 # Init ML bootstrap node
-sh init-bootstrap-node.sh 'admin' 'admin' 'basic' \
+sh init-bootstrap-node.sh 'admin' 'lingtao' 'basic' \
     3 10 'public' localhost
 
 # Wait for ML to init database
