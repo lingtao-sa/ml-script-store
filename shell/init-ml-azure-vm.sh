@@ -36,3 +36,8 @@ chmod 744 conf.yaml /etc/datadog-agent/conf.d/marklogic.d/conf.yaml
 # Restart datadog agent
 sudo systemctl restart datadog-agent
 # sudo systemctl status datadog-agent
+
+# Install Sumo Logic Collector
+wget "https://collectors.sumologic.com/rest/download/linux/64" -O SumoCollector.sh && chmod +x SumoCollector.sh
+sudo ./SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF
+
