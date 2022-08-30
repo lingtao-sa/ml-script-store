@@ -66,13 +66,13 @@ instances:
     ##       If a resource matches both an exclude pattern and an include pattern, it will be excluded.
     ## 'group' is the resource group to match (optional)
     #
-    # resource_filters:
+    resource_filters:
     #   - resource_type: forest
     #     pattern: Documents
-    #   - resource_type: database
-    #     include: false
-    #     pattern: Doc*
-    #     group: Default
+      - resource_type: database
+        include: false
+        pattern: Doc*
+        group: Default
 
     ## @param proxy - mapping - optional
     ## This overrides the `proxy` setting in `init_config`.
