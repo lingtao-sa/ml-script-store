@@ -19,15 +19,16 @@ sudo yum -y update
 # Marklogic
 #------------------------
 
-# Create ml-backup directory and assign owner to daemon (ML default linux user)
-cd /
-sudo mkdir ml-backup
-sudo chown -R daemon:daemon /ml-backup
-
 
 # Init ML bootstrap node
 sh init-bootstrap-node.sh 'admin' 'lingtao' 'basic' \
     3 10 'public' localhost
+
+
+# Create ml-backup directory and assign owner to daemon (ML default linux user)
+cd /
+sudo mkdir ml-backup
+sudo chown -R daemon:daemon /ml-backup    
 
 # Wait for ML to Init DB
 sleep 2m
@@ -58,17 +59,13 @@ sudo systemctl restart datadog-agent
 
 # Downlaod Sumo Logic Collector
 wget "https://collectors.sumologic.com/rest/download/linux/64" -O SumoCollector.sh && chmod +x SumoCollector.sh
-yes | cp SumoCollector.sh /ml-backup
 
 # Deploy pre-configed sumologic source file
 yes | cp /var/lib/waagent/custom-script/download/0/ml-azure-centos-sources.json /ml-backup
 
 # Install Sumo Logic Collector
-cd ml-backup
-sudo ./SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF -VsyncSources=/ml-backup/ml-azure-centos-sources.json -Vcollector.name="TAO DEV Collector"
-
+sudo /ml-backup/SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF -VsyncSources=/ml-backup/ml-azure-centos-sources.json -Vcollector.name="TAO DEV Collector"
 
 # Start Sumo Logic Collector
-# sudo service collector start
+sudo service collector start
 # sudo ./collector start
-# sudo service collector start
