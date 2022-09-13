@@ -15,12 +15,26 @@ sleep 2m
 # Update CentOS - It will take quit a while to complete 
 sudo yum -y update
 
+#------------------------
+# Marklogic
+#------------------------
+
+# Create ml-backup directory and assign owner to daemon (ML default linux user)
+cd /
+sudo mkdir ml-backup
+sudo chown -R daemon:daemon /ml-backup
+
+
 # Init ML bootstrap node
 sh init-bootstrap-node.sh 'admin' 'lingtao' 'basic' \
     3 10 'public' localhost
 
-# Wait for ML to init database
+# Wait for ML to Init DB
 sleep 2m
+
+#------------------------
+# Datadog
+#------------------------
 
 # Creat datadog user in ML DB
 curl -X POST --anyauth --user admin:admin -i -H "Content-Type: application/json" -d '{"user-name": "datadog", "password": "T3m@sek#", "roles": {"role": "manage-user"}}' http://localhost:8002/manage/v2/users    
@@ -37,7 +51,21 @@ chmod 744 conf.yaml /etc/datadog-agent/conf.d/marklogic.d/conf.yaml
 sudo systemctl restart datadog-agent
 # sudo systemctl status datadog-agent
 
-# Install Sumo Logic Collector
-wget "https://collectors.sumologic.com/rest/download/linux/64" -O SumoCollector.sh && chmod +x SumoCollector.sh
-sudo ./SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF
 
+#------------------------
+# Sumo Logic 
+#------------------------
+
+# Downlaod Sumo Logic Collector
+wget "https://collectors.sumologic.com/rest/download/linux/64" -O SumoCollector.sh && chmod +x SumoCollector.sh
+
+# Deploy pre-configed sumologic source file
+yes | cp /var/lib/waagent/custom-script/download/0/ml-azure-centos-sources.json /opt/SumoCollector/config/
+
+# Install Sumo Logic Collector
+sudo ./SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF -VsyncSources=/opt/SumoCollector/config/ml-azure-centos-sources.json -Vcollector.name="TAO DEV Collector"
+
+# Start Sumo Logic Collector
+sudo ./collector start
+# sudo ./collector start
+# sudo service collector start
