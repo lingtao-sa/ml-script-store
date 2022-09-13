@@ -1,0 +1,184 @@
+{
+  "api.version":"v1",
+  "sources":[{
+    "name":"tao-centos-ml-8000-accesslog",
+    "description":"Marklogic QConsole Access Log",
+    "category":"tao/centos/ml/8000-accesslog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "pathExpression":"/var/opt/MarkLogic/Logs/8000_AccessLog*.txt",
+    "denylist":[],
+    "sourceType":"LocalFile"
+  },{
+    "name":"tao-centos-ml-8030-accesslog",
+    "description":"SIMApp REST API Access Log",
+    "category":"tao/centos/ml/8030-accesslog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "denylist":[],
+    "pathExpression":"/var/opt/MarkLogic/Logs/8030_AccessLog*.txt",
+    "sourceType":"LocalFile"
+  },{
+    "name":"tao-centos-ml-8030-errorlog",
+    "description":"SIMApp REST API Error Log",
+    "category":"tao/centos/ml/8030-errorlog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "denylist":[],
+    "pathExpression":"/var/opt/MarkLogic/Logs/8030_ErrorLog*.txt",
+    "sourceType":"LocalFile"
+  },{
+    "name":"tao-centos-ml-8432-accesslog",
+    "description":"SIMApp ODBC Access Log",
+    "category":"tao/centos/ml/8432-accesslog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "denylist":[],
+    "pathExpression":"/var/opt/MarkLogic/Logs/8432_AccessLog*.txt",
+    "sourceType":"LocalFile"
+  },{
+    "name":"tao-centos-ml-8432-errorlog",
+    "description":"SIMApp ODBC Error Log",
+    "category":"tao/centos/ml/8432-errorlog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "denylist":[],
+    "pathExpression":"/var/opt/MarkLogic/Logs/8432_ErrorLog*.txt",
+    "sourceType":"LocalFile"
+  },{
+    "name":"tao-centos-ml-8700-accesslog",
+    "description":"SIMApp TEST REST API Access Log",
+    "category":"tao/centos/ml/8700-accesslog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "denylist":[],
+    "pathExpression":"/var/opt/MarkLogic/Logs/8700_AccessLog*.txt",
+    "sourceType":"LocalFile"
+  },{
+    "name":"tao-centos-ml-8700-errorlog",
+    "description":"SIMApp TEST REST API Error Log",
+    "category":"tao/centos/ml/8700-errorlog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "pathExpression":"/var/opt/MarkLogic/Logs/8700_ErrorLog*.txt",
+    "denylist":[],
+    "sourceType":"LocalFile"
+  },{
+    "name":"tao-centos-ml-9100-accesslog",
+    "description":"SIMApp AppServer Access Log",
+    "category":"tao/centos/ml/9100-accesslog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "denylist":[],
+    "pathExpression":"/var/opt/MarkLogic/Logs/9100_AccessLog*.txt",
+    "sourceType":"LocalFile"
+  },{
+    "name":"tao-centos-ml-9100-errorlog",
+    "description":"SIMApp AppServer Error Log",
+    "category":"tao/centos/ml/9100-errorlog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "denylist":[],
+    "pathExpression":"/var/opt/MarkLogic/Logs/9100_ErrorLog*.txt",
+    "sourceType":"LocalFile"
+  },{
+    "name":"tao-centos-ml-errorlog",
+    "description":"Marklogic Error Log",
+    "category":"tao/centos/ml/errorlog",
+    "hostName":"ml-azure-centos-node1",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "denylist":[],
+    "pathExpression":"/var/opt/MarkLogic/Logs/ErrorLog*.txt",
+    "sourceType":"LocalFile"
+  }]
+}
