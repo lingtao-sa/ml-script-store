@@ -66,6 +66,6 @@ yes | cp /var/lib/waagent/custom-script/download/0/ml-azure-centos-sources.json 
 sudo ./SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF -VsyncSources=/ml-backup/ml-azure-centos-sources.json -Vcollector.name="TAO DEV Collector"
 
 # Start Sumo Logic Collector
-sudo ./collector start
+sudo service collector start
 # sudo ./collector start
 # sudo service collector start
