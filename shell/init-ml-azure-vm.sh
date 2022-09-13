@@ -62,6 +62,7 @@ wget "https://collectors.sumologic.com/rest/download/linux/64" -O SumoCollector.
 
 # Deploy pre-configed sumologic source file
 yes | cp /var/lib/waagent/custom-script/download/0/ml-azure-centos-sources.json /ml-backup
+yes | cp ./SumoCollector.sh /ml-backup
 
 # Install Sumo Logic Collector
 sudo /ml-backup/SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF -VsyncSources=/ml-backup/ml-azure-centos-sources.json -Vcollector.name="TAO DEV Collector"
