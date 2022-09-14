@@ -70,3 +70,13 @@ sudo /ml-backup/SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.access
 # Start Sumo Logic Collector
 sudo service collector start
 # sudo ./collector start
+
+#------------------------
+# Others 
+#------------------------
+
+# Set su password
+sudo passwd root << EOD
+Mikyl@2012
+Mikyl@2012
+EOD
