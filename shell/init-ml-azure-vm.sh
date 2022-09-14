@@ -38,7 +38,7 @@ sleep 2m
 #------------------------
 
 # Creat datadog user in ML DB
-curl -X POST --anyauth --user admin:admin -i -H "Content-Type: application/json" -d '{"user-name": "datadog", "password": "T3m@sek#", "roles": {"role": "manage-user"}}' http://localhost:8002/manage/v2/users    
+curl -X POST --anyauth --user admin:lingtao -i -H "Content-Type: application/json" -d '{"user-name": "datadog", "password": "T3m@sek#", "roles": {"role": "manage-user"}}' http://localhost:8002/manage/v2/users    
 
 # Deploy pre-configed datadog yaml files
 yes | cp /var/lib/waagent/custom-script/download/0/datadog.yaml /etc/datadog-agent/
@@ -62,7 +62,7 @@ wget "https://collectors.sumologic.com/rest/download/linux/64" -O SumoCollector.
 
 # Deploy pre-configed sumologic source file
 yes | cp /var/lib/waagent/custom-script/download/0/ml-azure-centos-sources.json /ml-backup
-yes | cp ./SumoCollector.sh /ml-backup
+yes | mv ./SumoCollector.sh /ml-backup
 
 # Install Sumo Logic Collector
 sudo /ml-backup/SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF -VsyncSources=/ml-backup/ml-azure-centos-sources.json -Vcollector.name="TAO DEV Collector"
