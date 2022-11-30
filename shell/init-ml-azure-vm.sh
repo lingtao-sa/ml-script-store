@@ -71,7 +71,7 @@ yes | cp /var/lib/waagent/custom-script/download/0/ml-azure-centos-sources.json 
 yes | mv ./SumoCollector.sh /home/lingtao/ml-backup
 
 # Install Sumo Logic Collector
-sudo /home/lingtao/ml-backup/SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF -VsyncSources=/ml-backup/ml-azure-centos-sources.json -Vcollector.name="TAO DEV Collector"
+sudo /home/lingtao/ml-backup/SumoCollector.sh -q -Vsumo.accessid=suFrhPnrF9D0P1 -Vsumo.accesskey=yN2Kuy1915Du6uHmdWeHCMDcVAulN0F2cbHACmVDluzBmcjdx3eJL6NZeqpKfhbF -VsyncSources=/home/lingtao/ml-backup/ml-azure-centos-sources.json -Vcollector.name="TAO DEV Collector"
 
 # Start Sumo Logic Collector
 sudo service collector start
