@@ -19,6 +19,24 @@
     "denylist":[],
     "sourceType":"LocalFile"
   },{
+    "name":"tao-docker-ml-8000-errorlog",
+    "description":"Marklogic QConsole Error Log",
+    "category":"tao/centos/ml/8000-errorlog",
+    "hostName":"INTELNUC",
+    "automaticDateParsing":true,
+    "multilineProcessingEnabled":true,
+    "useAutolineMatching":true,
+    "forceTimeZone":false,
+    "filters":[],
+    "cutoffTimestamp":1661781600000,
+    "encoding":"UTF-8",
+    "fields":{
+      
+    },
+    "pathExpression":"/var/opt/MarkLogic/Logs/8000_ErrorLog*.txt",
+    "denylist":[],
+    "sourceType":"LocalFile"
+  },{
     "name":"tao-centos-ml-8030-accesslog",
     "description":"SIMApp REST API Access Log",
     "category":"tao/centos/ml/8030-accesslog",
