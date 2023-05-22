@@ -16,6 +16,25 @@ sleep 2m
 sudo yum -y update
 
 #------------------------
+# Azure AzCopy CLI
+#------------------------
+
+# Import the Microsoft repository key
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+# Create local azure-cli repository information
+echo -e "[azure-cli]
+name=Azure CLI
+baseurl=https://packages.microsoft.com/yumrepos/azure-cli
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/azure-cli.repo
+
+# Install with the yum install command
+sudo yum install azure-cli
+
+
+#------------------------
 # Marklogic
 #------------------------
 
