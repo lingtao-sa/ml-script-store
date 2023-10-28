@@ -1,10 +1,10 @@
 {
   "api.version":"v1",
   "sources":[{
-    "name":"tao-centos-ml-8000-accesslog",
+    "name":"tao-cluster-ml-8000-accesslog",
     "description":"Marklogic QConsole Access Log",
-    "category":"tao/centos/ml/8000-accesslog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8000-accesslog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -19,10 +19,10 @@
     "denylist":[],
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-8000-errorlog",
+    "name":"tao-docker-ml-8000-errorlog",
     "description":"Marklogic QConsole Error Log",
-    "category":"tao/centos/ml/8000-errorlog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8000-errorlog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -37,10 +37,10 @@
     "denylist":[],
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-8030-accesslog",
+    "name":"tao-cluster-ml-8030-accesslog",
     "description":"SIM REST Access Log",
-    "category":"tao/centos/ml/8030-accesslog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8030-accesslog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -55,10 +55,10 @@
     "pathExpression":"/var/opt/MarkLogic/Logs/8030_AccessLog*.txt",
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-8030-errorlog",
+    "name":"tao-cluster-ml-8030-errorlog",
     "description":"SIM REST Error Log",
-    "category":"tao/centos/ml/8030-errorlog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8030-errorlog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -73,10 +73,10 @@
     "pathExpression":"/var/opt/MarkLogic/Logs/8030_ErrorLog*.txt",
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-8052-accesslog",
+    "name":"tao-cluster-ml-8052-accesslog",
     "description":"SIM XDBC Access Log",
-    "category":"tao/centos/ml/8052-accesslog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8052-accesslog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -91,10 +91,10 @@
     "pathExpression":"/var/opt/MarkLogic/Logs/8052_AccessLog*.txt",
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-8052-errorlog",
+    "name":"tao-cluster-ml-8052-errorlog",
     "description":"SIM XDBC Error Log",
-    "category":"tao/centos/ml/8052-errorlog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8052-errorlog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -109,10 +109,10 @@
     "pathExpression":"/var/opt/MarkLogic/Logs/8052_ErrorLog*.txt",
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-8432-accesslog",
+    "name":"tao-cluster-ml-8432-accesslog",
     "description":"SIM ODBC Access Log",
-    "category":"tao/centos/ml/8432-accesslog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8432-accesslog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -127,10 +127,10 @@
     "pathExpression":"/var/opt/MarkLogic/Logs/8432_AccessLog*.txt",
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-8432-errorlog",
+    "name":"tao-cluster-ml-8432-errorlog",
     "description":"SIM ODBC Error Log",
-    "category":"tao/centos/ml/8432-errorlog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8432-errorlog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -145,10 +145,10 @@
     "pathExpression":"/var/opt/MarkLogic/Logs/8432_ErrorLog*.txt",
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-8700-accesslog",
+    "name":"tao-cluster-ml-8700-accesslog",
     "description":"SIM TEST REST Access Log",
-    "category":"tao/centos/ml/8700-accesslog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8700-accesslog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -163,10 +163,10 @@
     "pathExpression":"/var/opt/MarkLogic/Logs/8700_AccessLog*.txt",
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-8700-errorlog",
+    "name":"tao-cluster-ml-8700-errorlog",
     "description":"SIM TEST REST Error Log",
-    "category":"tao/centos/ml/8700-errorlog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/8700-errorlog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -181,10 +181,10 @@
     "denylist":[],
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-9100-accesslog",
+    "name":"tao-cluster-ml-9100-accesslog",
     "description":"SIM HTTP Access Log",
-    "category":"tao/centos/ml/9100-accesslog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/9100-accesslog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -199,10 +199,10 @@
     "pathExpression":"/var/opt/MarkLogic/Logs/9100_AccessLog*.txt",
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-9100-errorlog",
+    "name":"tao-cluster-ml-9100-errorlog",
     "description":"SIM HTTP Error Log",
-    "category":"tao/centos/ml/9100-errorlog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/9100-errorlog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
@@ -217,10 +217,10 @@
     "pathExpression":"/var/opt/MarkLogic/Logs/9100_ErrorLog*.txt",
     "sourceType":"LocalFile"
   },{
-    "name":"tao-centos-ml-errorlog",
+    "name":"tao-cluster-ml-errorlog",
     "description":"Marklogic Error Log",
-    "category":"tao/centos/ml/errorlog",
-    "hostName":"ml-azure-centos-node1",
+    "category":"tao/cluster/ml/errorlog",
+    "hostName":"ml-cluster-node3",
     "automaticDateParsing":true,
     "multilineProcessingEnabled":true,
     "useAutolineMatching":true,
