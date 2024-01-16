@@ -16,7 +16,7 @@ sleep 2m
 sudo yum -y update
 
 #------------------------
-# Azure AzCopy CLI
+# Azure Cli
 #------------------------
 
 # Import the Microsoft repository key
@@ -35,9 +35,18 @@ sudo yum -y install azure-cli
 
 
 #------------------------
+# azcopy https://github.com/Azure/azure-storage-azcopy/releases
+#------------------------
+wget https://azcopyvnext.azureedge.net/releases/release-10.22.2-20240110/azcopy_linux_amd64_10.22.2.tar.gz
+
+tar -xvf azcopy_linux_amd64_10.22.2.tar.gz
+sudo mv azcopy_linux_amd64_10.22.2/azcopy /usr/local/bin/
+sudo chmod +x /usr/local/bin/azcopy
+
+
+#------------------------
 # Marklogic
 #------------------------
-
 
 # Init ML bootstrap node
 sh init-bootstrap-node.sh 'admin' 'lingtao' 'basic' \
