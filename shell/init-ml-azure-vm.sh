@@ -37,10 +37,12 @@ sudo yum -y install azure-cli
 #------------------------
 # azcopy https://github.com/Azure/azure-storage-azcopy/releases
 #------------------------
-wget https://azcopyvnext.azureedge.net/releases/release-10.22.2-20240110/azcopy_linux_amd64_10.22.2.tar.gz
+# wget https://azcopyvnext.azureedge.net/releases/release-10.22.2-20240110/azcopy_linux_amd64_10.22.2.tar.gz
+# wget https://aka.ms/downloadazcopy-v10-linux
+wget https://azcopyvnext.azureedge.net/releases/release-10.23.0-20240129/azcopy_linux_amd64_10.23.0.tar.gz
 
-tar -xvf azcopy_linux_amd64_10.22.2.tar.gz
-sudo mv azcopy_linux_amd64_10.22.2/azcopy /usr/local/bin/
+tar -xvf azcopy_linux_amd64_10.23.0.tar.gz
+sudo mv azcopy_linux_amd64_10.23.0/azcopy /usr/local/bin/
 sudo chmod +x /usr/local/bin/azcopy
 
 
